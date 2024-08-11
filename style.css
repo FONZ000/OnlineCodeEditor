@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
+
+:root {
+    --modal-duration: 1s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(0,0,0,0.4),rgb(0,0,0,0.8)), url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='69.282' patternTransform='scale(3) rotate(140)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(204,42.4%,27.3%,1)'/><path d='M13.333-3.849v23.094M6.667-15.396l20 11.547M13.333-19.245l20 11.547M20 0v23.094m20-34.641l-6.667 3.849-6.666 3.849L20 0M0-11.547l6.667 3.849 6.666 3.849L20 0m0-23.094l20 11.547v23.094L20 23.094l-6.667-3.849-6.666-3.849L0 11.547v-23.094l6.667-3.849 6.666-3.849zM40-3.769L20 7.698m20-3.849l-16.253 9.384L20 15.396M6.667-7.698v23.094m6.666 50.037v23.094M6.667 53.886l20 11.547M13.333 50.037l20 11.547M20 69.282v23.094m20-34.641l-6.667 3.849-6.666 3.849L20 69.282M0 57.735l6.667 3.849 6.666 3.849L20 69.282m0-23.094l20 11.547v23.094L20 92.376l-6.667-3.849-6.666-3.849L0 80.829V57.735l6.667-3.849 6.666-3.849zm20 19.325L20 76.98m20-3.849L20 84.678M6.667 61.584v23.094m26.666-53.886v23.094m-6.666-34.641l20 11.547M33.333 15.396l20 11.547M40 34.641v23.094m20-34.641l-6.667 3.849-6.666 3.849L40 34.641M20 23.094l6.667 3.849 6.666 3.849L40 34.641m0-23.094l20 11.547v23.094L40 57.735l-6.667-3.849-6.666-3.849L20 46.188V23.094l6.667-3.849 6.666-3.849zm20 19.325L40 42.339m20-3.849L40 50.037M26.667 26.943v23.094M-6.667 30.792v23.094m-6.666-34.641l20 11.547M-6.667 15.396l20 11.547M0 34.641v23.094m20-34.641l-6.667 3.849-6.666 3.849L0 34.641m-20-11.547l6.667 3.849 6.666 3.849L0 34.641m0-23.094l20 11.547v23.094L0 57.735l-6.667-3.849-6.666-3.849L-20 46.188V23.094l6.667-3.849 6.666-3.849zm20 19.325L0 42.339m20-3.849L0 50.037m-13.333-23.094v23.094'  stroke-width='3' stroke='hsla(183,30.6%,33.9%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+.g-navbar {
+    background: rgba(40, 76, 99, 1);
+}
+
+.navbar-brand {
+    color: white;
+}
+
+
+/* Help modal*/
+
+.modalHelp {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+  
+  .modal-header h2,
+  .modal-footer h3 {
+    margin: 0;
+}
+  
+  .modal-header {
+    background: rgba(40, 76, 99, 1);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: rgba(60, 110, 113, 1); 
+    color: #fff;
+}
+  
+  .modal-footer {
+    background: rgba(40, 76, 99, 1);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .closeHelp {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .closeHelp:hover,
+  .closeHelp:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+#help-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgba(60, 110, 113, 1);
+
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+
+/*Help Modal*/
+
+/*About Modal*/
+
+.modalAbout {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+  .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
+}
+  
+  .modal-header h2,
+  .modal-footer h3 {
+    margin: 0;
+}
+  
+  .modal-header {
+    background: rgba(40, 76, 99, 1);
+    padding: 15px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+  
+  .modal-body {
+    padding: 10px 20px;
+    background: rgba(60, 110, 113, 1); 
+    color: #fff;
+}
+  
+  .modal-footer {
+    background: rgba(40, 76, 99, 1);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .closeAbout {
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .closeAbout:hover,
+  .closeAbout:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+#help-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgba(60, 110, 113, 1);
+
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+#about-btn{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgba(60, 110, 113, 1);
+
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+/*About Modal*/
+
+.lang-type {
+  width: 100%;
+    text-align: center;
+    background: rgba(40, 76, 99, 1);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1px; 
+    margin-right: 1px; 
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.html-code{
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.css-code {
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.js-code {
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.res {
+    width: 100%;
+    background: rgba(40, 76, 99, 1);
+    color: white;
+    text-align: left;
+    margin-left: 1px; 
+    margin-right: 1px; 
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 24px;
+}
+
+.res-text {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.utility-text {
+    width: 100%;
+    background: rgba(40, 76, 99, 1);
+    color: white;
+    text-align: left;
+    margin-left: 1px; 
+    margin-right: 1px; 
+    border-radius: 5px;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+    height: 24px;
+    text-align: center;
+}
+
+.utility{
+  background: rgba(40, 76, 99, 1);
+  width: 100%;
+  height: 130px;
+  border-radius: 5px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tools-btn {
+    background-color: rgba(40, 76, 99, 1);
+    border-radius: 5px;
+}
+
+#run-btn {
+    margin: 5px;
+    margin-right: 0px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgba(60, 110, 113, 1);
+    width: 100%;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+#save-btn {
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgba(60, 110, 113, 1);
+    width: 100%;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+}
+
+#about-btn:active,
+#help-btn:active,
+#submit-html-file:active,
+#run-btn:active,
+#save-btn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+  }
+
+#select-theme {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    background-color: rgba(40, 76, 99, 1);
+    border-radius: 5px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+#select{
+  background-color: #3c6e71;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  margin-top: 5px;
+  width: 100px;
+}
+
+.preview {
+    background-color: white;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+}
+  
+
+
+#preloader {
+    background: #3c6e71 url(img/Spinner-1s-200px.gif) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height: 40px;
+    background-color: rgba(40, 76, 99, 1);
+    text-align: left;
+    z-index: 9;
+ }
+
+#g-footer-text {
+     margin-left: 50px;
+     margin-top: 6px;
+     color: white;
+ }
